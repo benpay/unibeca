@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars"></i> 
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a routerLink="/dashboard">Dashboard</a> <br>
+          <a routerLink="/financed-projects">Proyectos financiados</a> <br>
+          <a>Equipo Unibeca</a><br>
+          <a class="dropdown-item" href="#">Cómo surge y nuestros valores</a>
+          <a routerLink="/faqs" href="#">FAQS</a> <br>
+          <a routerLink="/secretary">Secretaría</a>
+        </div>
+      </div>
+    <!-- <a class="navbar-brand" href="#"><i class="fa fa-bars"></i> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav  my-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" *ngIf="!isLogin" href="/login">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLogin">
+            <a class="nav-link" href="/register">Registro</a>
+          </li>
+          <li class="nav-item" *ngIf="isLogin">
+            <a class="nav-link" href="#" (click)="onClickLogout()" >Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">{{nameUser}}</a>
+          </li>
+          <li class="nav-item" *ngIf="isLogin">
+            <!-- <img src="{{photoUser}" class="rounded-circle"  *ngIf="{{photoUser}"> -->
+            <span class="badge pill badge-secondary">{{emailUser}}</span>
+          </li>
+        </ul>
+    </div>
+  </nav>

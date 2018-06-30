@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">Registro</h1>
+        <form #registerstudient="ngForm" (ngSubmit)="onSubmitAddUser(registerstudient)">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" [(ngModel)]="studient.email" class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" [(ngModel)]="studient.password" class="form-control">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="studient.name" class="form-control">
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" id="surname" [(ngModel)]="studient.surname" class="form-control">
+            <label for="birthdate">Birthdate</label>
+            <input type="text" name="birthdate" id="birthdate" [(ngModel)]="studient.birthdate" class="form-control">
+            <label for="studies">Studies</label>
+            <input type="text" name="studies" id="studies" [(ngModel)]="studient.studies" class="form-control"> 
+            <button class="btn btn-info" id="button">Send</button>
+          <!-- <input type="submit" value="Enviar" class="btn btn-primary btn-block btn-lg"> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
